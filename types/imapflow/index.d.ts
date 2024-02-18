@@ -353,13 +353,13 @@ export interface MailboxDeleteResponse {
 export interface MessageStructureObject {
     part: string;
     type: string;
-    parameters: string;
+    parameters: { [k: string]: string };
     id: string;
     encoding: string;
     size: number;
     envelope: MessageEnvelopeObject;
     disposition: string;
-    dispositionParameters: string;
+    dispositionParameters: { [k: string]: string };
     childNodes: MessageStructureObject[];
 }
 
